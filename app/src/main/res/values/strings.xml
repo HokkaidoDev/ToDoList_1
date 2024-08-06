@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ToDoList_6_RXjava_MyRealization</string>
+    <string name="note_hint">Enter note:</string>
+    <string name="low">Low</string>
+    <string name="high">High</string>
+    <string name="medium">Medium</string>
+    <string name="save">Save</string>
+    <string name="error_field_empty">Please, fill a field!</string>
+</resources>
