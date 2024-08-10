@@ -1,6 +1,6 @@
 # ToDoList
 
-## This app will help for people put one's affairs in order.
+## This app will help you get things done.
 
 In this application, I use:
 * Room
