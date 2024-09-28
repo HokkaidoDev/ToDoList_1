@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -38,10 +39,9 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.constraintlayout)
 
-    val room_version = "2.6.1"
-
-    implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor("androidx.room:room-compiler:$room_version")
+    implementation(libs.room)
+    annotationProcessor(libs.room.annotation.processor)
+    ksp(libs.room.annotation.processor)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
