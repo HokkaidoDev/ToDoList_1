@@ -59,7 +59,7 @@ public class AddNoteActivity extends AppCompatActivity {
     }
 
     private void saveNote(){
-        String text = editTextNote.getText().toString();
+        String text = editTextNote.getText().toString().trim();
         if(text.isEmpty()){
             Toast.makeText(this, R.string.error_field_empty, Toast.LENGTH_SHORT).show();
             //Snackbar.make( findViewById(R.id.main), R.string.error_field_empty, Snackbar.LENGTH_SHORT).show();
