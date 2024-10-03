@@ -17,11 +17,11 @@ public class AddNoteViewModel extends AndroidViewModel {
         notesDao = NotesDatabase.getInstance(application).notesDao();
     }
 
-    public LiveData<Boolean> shouldCloseScreen(){
+    public LiveData<Boolean> shouldCloseScreen() {
         return shouldCloseScreen;
     }
 
-    public void showNotes(Note note){
+    public void showNotes(Note note) {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {

@@ -39,10 +39,10 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
     @Override
     public void onBindViewHolder(@NonNull NotesViewHolder viewHolder, int position) {
         Note note = notes.get(position);
-        viewHolder.textView.setText(note.getText());
+        viewHolder.textViewNote.setText(note.getText());
 
         int colorResId;
-        switch (note.getPriority()){
+        switch (note.getPriority()) {
             case 0:
                 colorResId = android.R.color.holo_green_light;
                 break;
@@ -53,7 +53,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
                 colorResId = android.R.color.holo_red_light;
         }
         int color = ContextCompat.getColor(viewHolder.itemView.getContext(), colorResId);
-        viewHolder.textView.setBackgroundColor(color);
+        viewHolder.textViewNote.setBackgroundColor(color);
     }
 
     @Override
@@ -61,11 +61,12 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NotesViewHol
         return notes.size();
     }
 
-    class NotesViewHolder extends RecyclerView.ViewHolder{
-        private TextView textView;
+    class NotesViewHolder extends RecyclerView.ViewHolder {
+        private TextView textViewNote;
+
         public NotesViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.textViewNote);
+            textViewNote = itemView.findViewById(R.id.textViewNote);
         }
     }
 }

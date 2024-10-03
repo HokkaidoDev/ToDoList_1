@@ -32,7 +32,7 @@ public class AddNoteActivity extends AppCompatActivity {
         viewModel.shouldCloseScreen().observe(this, new Observer<Boolean>() {
             @Override
             public void onChanged(Boolean shouldClose) {
-                if(shouldClose){
+                if (shouldClose) {
                     finish();
                 }
             }
@@ -46,37 +46,37 @@ public class AddNoteActivity extends AppCompatActivity {
         });
     }
 
-    private void initView(){
+    private void initView() {
         editTextNote = findViewById(R.id.editTextNote);
         radioButtonLow = findViewById(R.id.radioButtonLow);
         radioButtonMedium = findViewById(R.id.radioButtonMedium);
         buttonSave = findViewById(R.id.buttonSave);
     }
 
-    public static Intent newIntent(Context context){
+    public static Intent newIntent(Context context) {
         Intent intent = new Intent(context, AddNoteActivity.class);
         return intent;
     }
 
-    private void saveNote(){
+    private void saveNote() {
         String text = editTextNote.getText().toString().trim();
-        if(text.isEmpty()){
+        if (text.isEmpty()) {
             Toast.makeText(this, R.string.error_field_empty, Toast.LENGTH_SHORT).show();
-            //Snackbar.make( findViewById(R.id.main), R.string.error_field_empty, Snackbar.LENGTH_SHORT).show();
-        }else{
+            //Snackbar.make(findViewById(R.id.add_note), R.string.error_field_empty, Snackbar.LENGTH_SHORT).show();
+        } else {
             int priority = getPriority();
             Note note = new Note(text, priority);
             viewModel.showNotes(note);
         }
     }
 
-    private int getPriority(){
+    private int getPriority() {
         int priority;
-        if(radioButtonLow.isChecked()){
+        if (radioButtonLow.isChecked()) {
             priority = 0;
         } else if (radioButtonMedium.isChecked()) {
             priority = 1;
-        }else{
+        } else {
             priority = 2;
         }
         return priority;
