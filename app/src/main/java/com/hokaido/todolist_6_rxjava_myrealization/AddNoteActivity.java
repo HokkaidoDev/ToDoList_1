@@ -41,6 +41,7 @@ public class AddNoteActivity extends AppCompatActivity {
         buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //buttonSave.setEnabled(false);
                 saveNote();
             }
         });
