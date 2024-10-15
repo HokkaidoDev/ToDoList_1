@@ -33,7 +33,7 @@ public class MainViewModel extends AndroidViewModel {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(() -> Log.d("MainViewModel", "Removed: " + note.getId()),
-                        (throwable -> Log.d("MainViewModel", "Error removed")));
+                        (throwable -> Log.d("MainViewModel", "Error remove")));
         compositeDisposable.add(disposable);
     }
 
