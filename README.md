@@ -6,6 +6,7 @@ In this application, I use:
 * Room
 * RecyclerView
 * MVVM
+* RxJava
 ---
 <img src="https://github.com/user-attachments/assets/71399144-78cf-49f0-90db-dddc58c0adcd" height="500" width="250">
 
